@@ -11,7 +11,7 @@ important.
 (Go to stack overflow for any questions)
 (After you download it from github in your local disk)
 Steps in How To Use:
-1. Install Python
+# 1. Install Python
 
 Python is a programming language. By installing it in your computer through terminal, you can run any executable files with the suffix ".py" by simply type
 "python <your filename>".  ex: "python script.py"
