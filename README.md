@@ -8,8 +8,23 @@ Idea:   GUI using tkinter, Backend using selenium to scrap the html code in the 
 in two different json files. All files for this application are in the same folder, be careful when choosing where the folder is downloaded, because the path is
 important. 
 
-(Go to stack overflow for any questions)
+Utilities:
+Search: Including search for the lowest price of a product or product have the most review, etc......
+Track: Keep track of a product you want and notified you through email when it got discounted, etc......
+For more utilities, you can send requests or suggestions to author's email: wzhao0842@gmail.com
+
+(Go to stack overflow for any questions during Installation or ask the author)
 (After you download it from github in your local disk)
+
+Path: the location of a file or folder in your system. Ex: test.txt is located at "C:\....." or "/users/....."
+
+How to get the path of a file? 
+
+  1. open terminal
+  2. open UI and move to the file or folder location 
+  3. drag that file or folder to terminal
+  4. you will see the path of that file or folder
+  
 Steps in How To Use:
 # 1. Install Python
 
@@ -31,10 +46,11 @@ Nice, you finally make to here! Almost done, hold on!
 # 3. Install Libraries
  
 In your terminal, give the following commands one by one. 
-pip install selenium
-pip install threading
-pip install Pillow 
-pip install smtplib
+
+  pip install selenium
+  pip install threading
+  pip install Pillow
+  pip install smtplib
   
 # 4. Download a Google Chrome version 89 
   
@@ -45,16 +61,11 @@ pip install smtplib
 # 5. Edit the Path in the Program
   
 Go click the frontend.py and backend.py, change where the comment need you to change. 
-How to get the path of a file? 
-  1. open terminal
-  2. open file in UI 
-  3. drag that file to terminal
-  4. you will see the path of that file
 
 # 6. All Installation Done!
   Run your Application by typing "python frontend.py" in terminal. If you want to stop it, click ctrl-d or ctrl-z.
   
-Note: further updates will be included. If you having any questions, you can reachout to my email wzhao0842@gmail, I will be answer you back in 48 hours.
+Note: further updates will be included. If you having any questions, you can reachout to author's email address: wzhao0842@gmail.com, I will be answer you back in 48 hours.
 
 
 
