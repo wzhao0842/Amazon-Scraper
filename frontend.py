@@ -14,6 +14,9 @@ win.title("Amazon Tracker")
 win.geometry("700x500")
 
 json_file = '/Users/weijiazhao/Desktop/Python/projects/amazonScraper/search.json'    //change it to the path where your serach.json is located 
+
+system_command = "python -m smtpd -c DebuggingServer -n localhost:465"    // command used to running the python smtpd email server 
+
 def send_mail(recipient, message):
     try:
         m = Message()
