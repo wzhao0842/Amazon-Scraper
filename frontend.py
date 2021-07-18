@@ -13,6 +13,7 @@ win.title("Amazon Tracker")
 
 win.geometry("700x500")
 
+json_file = '/Users/weijiazhao/Desktop/Python/projects/amazonScraper/search.json'    //change it to the path where your serach.json is located 
 def send_mail(recipient, message):
     try:
         m = Message()
@@ -113,7 +114,7 @@ def search_page(search_item, page):
         sp.rowconfigure(i,weight=1,minsize=50)
     
     if search_item == "":
-        jsdata = file_read('/Users/weijiazhao/Desktop/Python/projects/amazonScraper/search.json', 'r')
+        jsdata = file_read(json_file, 'r')
         jsdata = sorted_dic(jsdata)
         name = "sadlfkjs"
         price = 1000000
@@ -199,7 +200,7 @@ def search_start(text, page, sp):
     back = tk.Button(master=sp,text="back",padx=40,pady=40,command= lambda: [forget_frame(sp), initial_page()])
     back.grid(row=8,column=8,columnspan=2,rowspan=2)
     api().search_products(text, page)
-    jsdata = file_read('/Users/weijiazhao/Desktop/Python/projects/amazonScraper/search.json', 'r')
+    jsdata = file_read(json_file, 'r')
     jsdata = sorted_dic(jsdata)
 
     name = "!!!!!!!!"
