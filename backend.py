@@ -1,6 +1,7 @@
 import re
 import time
 import json
+import os
 from message import Message
 
 from selenium import webdriver as wdrive
@@ -13,7 +14,8 @@ from selenium.webdriver.chrome.options import Options
 
 class BackendAPI:
     def __init__(self):
-        self.PATH = '/Users/weijiazhao/Desktop/chrome/chromedriver2'
+        self.json_file = '/Users/weijiazhao/Desktop/Python/projects/amazonScraper/track.json'     //change to the path where your track.json file located
+        self.PATH = '/Users/weijiazhao/Desktop/chrome/chromedriver2'    // change to the path where your executable chrome version 89 located 
         self.base_url = "https://www.amazon.com/"
         # self.option = wdrive.ChromeOptions()
         # self.option.add_argument('headless')
@@ -56,7 +58,7 @@ class BackendAPI:
                 keys = "attempt" + "_" + str(num)
                 currtime = str(time.ctime())
                 
-                obj = self.read_json('/Users/weijiazhao/Desktop/Python/projects/amazonScraper/track.json')
+                obj = self.read_json(self.json_file)     
                 
                 obj[keys] = []
                 obj[keys].append({
@@ -65,10 +67,10 @@ class BackendAPI:
                     'time':currtime
                 })
                 
-                self.dump_json(obj,'/Users/weijiazhao/Desktop/Python/projects/amazonScraper/track.json')
+                self.dump_json(obj,self.json_file)
 
                 
-                realdata = self.read_json('/Users/weijiazhao/Desktop/Python/projects/amazonScraper/track.json')
+                realdata = self.read_json(self.json_file)
                 
                 #compare prices to check if discount
                 if realdata[keys][0]['price'] > realdata['attempt_1'][0]['price']:
@@ -77,10 +79,10 @@ class BackendAPI:
                     mail.send_email(f"Congrats!", "\n", "Original Price: {realdata['attempt_1'][0]['price']}",
                     "\n", "Current Price: {realdata[keys][0]['price']}", "\n", "Discount Rate: {int(100-discount)}")
                     
-                    adatas = self.read_json('/Users/weijiazhao/Desktop/Python/projects/amazonScraper/track.json')
+                    adatas = self.read_json(self.json_file)
                     
                 if num >= 100:
-                        with open('/Users/weijiazhao/Desktop/Python/projects/amazonScraper/track.json', 'w') as r:
+                        with open(self.json_file, 'w') as r:
                             jsdata = json.loads(r.read())
                             for i in jsdata:
                                 del i
