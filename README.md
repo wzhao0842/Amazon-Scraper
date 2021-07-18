@@ -1,9 +1,9 @@
-# Amazon-Tracker
+# Amazon-Tracker Description and User Guide
 
 A desktop GUI application for tracking and search products in Amazon (using Python)
 
 Language: Python
-Required Install Libraries: selenium, smtplib, tkinter, Pillow
+Required Install Libraries: selenium, smtplib, threading, Pillow
 Idea:   GUI using tkinter, Backend using selenium to scrap the html code in the website. The data of two main utilities, search and track, are stored 
 in two different json files. All files for this application are in the same folder, be careful when choosing where the folder is downloaded, because the path is
 important. 
@@ -22,7 +22,40 @@ Go to your terminal or command line and type "python --version", if you see the 
 
 2. Install pip
 
-pip is a 
+pip is a installation tool of python, with "pip" you can install any libraries in python.
+if your python version is the newest, or downloaded from python.org recently, otherwise, I recommend you to check out this installation guide website:
+https://pip.pypa.io/en/stable/installing/
+
+Nice, you finally make to here! Almost done, hold on!
+  
+3. Install Libraries
+ 
+In your terminal, give the following commands one by one. 
+pip install selenium
+pip install threading
+pip install Pillow 
+pip install smtplib
+  
+4. Download a Google Chrome version 89 
+  
+  Why? Because this application use this specific Chrome version as search engine, it's also faster and consuming less computational power. 
+  
+  Go to this website and download, make sure to choose the 64 bit one. https://chrome.softwaredownload.co.in/chrome-89-0-4389
+  
+5. Edit the Path in the Program
+  
+Go click the frontend.py and backend.py, change where the comment need you to change. 
+How to get the path of a file? 
+  1. open terminal
+  2. open file in UI 
+  3. drag that file to terminal
+  4. you will see the path of that file
+
+6. All Installation Done!
+  Run your Application by typing "python frontend.py" 
+  
+Note: further update will be included. If you having any questions, you can reachout to my email wzhao0842@gmail
+
 
 
 
