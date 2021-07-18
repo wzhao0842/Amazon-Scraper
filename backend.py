@@ -14,7 +14,8 @@ from selenium.webdriver.chrome.options import Options
 
 class BackendAPI:
     def __init__(self):
-        self.json_file = '/Users/weijiazhao/Desktop/Python/projects/amazonScraper/track.json'     //change to the path where your track.json file located
+        self.track_file = '/Users/weijiazhao/Desktop/Python/projects/amazonScraper/track.json'     //change to the path where your track.json file located
+        self.search_file = '/Users/weijiazhao/Desktop/Python/projects/amazonScraper/track.json' // change to the path where your search.json file located
         self.PATH = '/Users/weijiazhao/Desktop/chrome/chromedriver2'    // change to the path where your executable chrome version 89 located 
         self.base_url = "https://www.amazon.com/"
         # self.option = wdrive.ChromeOptions()
@@ -149,7 +150,7 @@ class BackendAPI:
             page = WebDriverWait(page_num, 10).until(ec.element_to_be_clickable((By.CLASS_NAME, 'a-last')))
             page.click()
         
-        self.dump_json(self.data,'/Users/weijiazhao/Desktop/Python/projects/amazonScraper/search.json')
+        self.dump_json(self.data,self.search_file)
         
 
  
