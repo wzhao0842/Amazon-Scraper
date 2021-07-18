@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../C++/usaco"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
