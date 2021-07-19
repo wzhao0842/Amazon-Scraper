@@ -39,7 +39,7 @@ Go to your terminal or command line and type "python --version", if you see the 
 # 2. Install pip
 
 pip is a installation tool of python, with "pip" you can install any libraries in python.
-if your python version is the newest, or downloaded from python.org recently, otherwise, I recommend you to check out this installation guide website:
+if your python version is the newest, or downloaded from python.org recently then you are good to go, otherwise, I recommend you to check out this installation guide website:
 https://pip.pypa.io/en/stable/installing/
 
 Nice, you finally make to here! Almost done, hold on!
