@@ -4,6 +4,7 @@ A desktop GUI application for tracking and search products in Amazon (using Pyth
 
 Language: Python
 Required Install Libraries: selenium, smtplib, threading, Pillow
+
 Idea:   GUI using tkinter, Backend using selenium to scrap the html code in the website. The data of two main utilities, search and track, are stored 
 in two different json files. All files for this application are in the same folder, be careful when choosing where the folder is downloaded, because the path is
 important. 
