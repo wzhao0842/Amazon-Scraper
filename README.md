@@ -63,11 +63,6 @@ In your terminal, give the following commands one by one.
   
 Go click the frontend.py and backend.py, change where the comment need you to change. (Please identified which system you used, windows ans unix system have different format)
 
-# 6. All Installation Done!
-  Run your Application by typing "python frontend.py" in terminal. If you want to stop it, click ctrl-d or ctrl-z.
-  
-Note: further updates will be included. If you having any questions, you can reachout to author's email address: wzhao0842@gmail.com, I will be answer you back in 48 hours.
 
-:)
 
 
